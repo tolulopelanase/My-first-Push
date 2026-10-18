@@ -1,0 +1,177 @@
+{
+  "info": {
+    "_postman_id": "0aea21e6-6f46-4561-a832-ad4b82292609",
+    "name": "FAKE REST E-COMMERCE",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "57859672",
+    "_collection_link": "https://go.postman.co/collection/57859672-0aea21e6-6f46-4561-a832-ad4b82292609?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Add User",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\r\n\"firstName\": \"Tolulope\",\r\n\"lastName\": \"Lanase\",\r\n\"age\": 30,\r\n\"gender\": \"Female\",\r\n\"email\": \"testing@gmail.com\"\r\n\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{fakerest e-com baseurl}}users/add",
+          "host": [
+            "{{fakerest e-com baseurl}}users"
+          ],
+          "path": [
+            "add"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get all user",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{fakerest e-com baseurl}}users",
+          "host": [
+            "{{fakerest e-com baseurl}}users"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\"username\": \"emilys\",\r\n\"password\": \"emilyspass\",\r\n\"expiresInMins\": 30\r\n  }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{fakerest e-com baseurl}}user/login",
+          "host": [
+            "{{fakerest e-com baseurl}}user"
+          ],
+          "path": [
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Add product",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"title\": \"BMW Pencil\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{fakerest e-com baseurl}}products/add",
+          "host": [
+            "{{fakerest e-com baseurl}}products"
+          ],
+          "path": [
+            "add"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update product",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"title\": \"lamboginiW Pencil\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{fakerest e-com baseurl}}products/1",
+          "host": [
+            "{{fakerest e-com baseurl}}products"
+          ],
+          "path": [
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete product",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{fakerest e-com baseurl}}products/1",
+          "host": [
+            "{{fakerest e-com baseurl}}products"
+          ],
+          "path": [
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Add a new cart",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"userId\": 13,\r\n  \"products\": [\r\n    {\r\n      \"productId\": 1,\r\n      \"quantity\": 1\r\n    }\r\n  ]\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{fakerest e-com baseurl}}carts/add",
+          "host": [
+            "{{fakerest e-com baseurl}}carts"
+          ],
+          "path": [
+            "add"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
